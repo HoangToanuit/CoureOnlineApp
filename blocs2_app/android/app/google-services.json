@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "67777642318",
+    "project_id": "learning-app-bd4bb",
+    "storage_bucket": "learning-app-bd4bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67777642318:android:8bfe0b648362277c3f681f",
+        "android_client_info": {
+          "package_name": "com.example.blocs2_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "67777642318-tdhh38qur9eulhe9mk53qsc8og2k20iu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCsvtmcVzqf-YoZEWtk8sIhyqPKqb77Zw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "67777642318-tdhh38qur9eulhe9mk53qsc8og2k20iu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
