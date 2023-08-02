@@ -1,14 +1,15 @@
-import 'package:blocs2_app/main.dart';
-import 'package:blocs2_app/pages/bloc/welcome_bloc.dart';
-import 'package:blocs2_app/pages/bloc/welcome_event.dart';
+import 'package:blocs2_app/common/values/constants.dart';
+import 'package:blocs2_app/global.dart';
+import 'package:blocs2_app/pages/welcome/bloc/welcome_bloc.dart';
+import 'package:blocs2_app/pages/welcome/bloc/welcome_event.dart';
+import 'package:blocs2_app/pages/welcome/bloc/welcome_state.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../common/values/colors.dart';
-import 'bloc/welcome_state.dart';
+
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -126,7 +127,8 @@ class _WelcomePageState extends State<WelcomePage> {
                   curve: Curves.easeIn
               );
             }else{
-              Navigator.of(context).pushNamedAndRemoveUntil("signIn", (route) => false);
+              Global.storageService.setBool(AppConstants.STORAGE_DEVICE_OPEN, true);
+              Navigator.of(context).pushNamedAndRemoveUntil("/sign-in", (route) => false);
             }
           },
           child: Container(

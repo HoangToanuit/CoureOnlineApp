@@ -1,7 +1,6 @@
 
 import 'package:blocs2_app/common/routes/pages.dart';
 import 'package:blocs2_app/pages/application/application_page.dart';
-import 'package:blocs2_app/pages/bloc/welcome_bloc.dart';
 import 'package:blocs2_app/pages/bloc_providers.dart';
 import 'package:blocs2_app/pages/register/register.dart';
 import 'package:blocs2_app/pages/sign_in/bloc/sigin_blocs.dart';
@@ -11,7 +10,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'common/routes/routes.dart';
 import 'global.dart';
 
 Future<void> main() async {
@@ -37,7 +36,6 @@ class MyApp extends StatelessWidget {
                   backgroundColor: Colors.white
                 )
               ),
-              home: WelcomePage(),
               onGenerateRoute: AppPages.GenerateRouteSettings,
             );
           },

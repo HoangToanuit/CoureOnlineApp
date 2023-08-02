@@ -1,8 +1,12 @@
+import 'package:blocs2_app/common/routes/names.dart';
+import 'package:blocs2_app/common/values/constants.dart';
 import 'package:blocs2_app/common/widgets/flutter_toast.dart';
 import 'package:blocs2_app/pages/sign_in/bloc/sigin_blocs.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../global.dart';
 
 class SignInController {
   final BuildContext context;
@@ -39,7 +43,9 @@ class SignInController {
           }
           var user = credential.user;
           if(user!=null){
-            Navigator.of(context).pushNamedAndRemoveUntil("/application", (route) => false);
+            print("exits");
+            Global.storageService.setString(AppConstants.STORAGE_USER_TOKEN_KEY, "12345678");
+            Navigator.of(context).pushNamedAndRemoveUntil(AppRoutes.APPLICATION, (route) => false);
           }else{
             toastInfor(msg: "You don not user of this app");
           }
